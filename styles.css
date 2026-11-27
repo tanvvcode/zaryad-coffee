@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Извлечённые пользовательские стили */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+body { margin: 0; padding: 0; overflow-x: clip; }
+@media (min-width: 1280px) {
+  :is(
+    .container,
+    .max-w-5xl,
+    .max-w-6xl,
+    .max-w-7xl,
+    .max-w-screen-lg,
+    .max-w-screen-xl,
+    .max-w-screen-2xl,
+    [class*="max-w-[960px]"],
+    [class*="max-w-[10"],
+    [class*="max-w-[11"],
+    [class*="max-w-[12"],
+    [class*="max-w-[13"],
+    [class*="max-w-[14"],
+    [class*="max-w-[15"]
+  ):not(p):not(span):not(h1):not(h2):not(h3):not(h4):not(blockquote):not(form):not(aside):not(dialog):not(.fixed:not(header):not(nav)):not(.fixed:not(header):not(nav) *):not([role="dialog"]):not([role="dialog"] *):not([aria-modal="true"]):not([aria-modal="true"] *) {
+    max-width: min(94vw, 2200px) !important;
+    width: 100% !important;
+  }
+}
+@keyframes miffTopDownEnter {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.miff-topdown-enter {
+  animation: miffTopDownEnter 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
